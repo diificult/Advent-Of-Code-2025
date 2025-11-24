@@ -3,7 +3,7 @@
 # 🎄 Advent of Code 2025 – C# Solutions
 
 Welcome to my **Advent of Code 2025** repository!  
-This repo contains my solutions to the annual programming challenge created by [Advent of Code](https://adventofcode.com/). This year I’ll be solving the puzzles using **C#**.
+This repo contains my solutions to the annual programming challenge created by [Advent of Code](https://adventofcode.com/). I’ll be solving the puzzles using **C#**.
 
 ---
 
@@ -33,8 +33,7 @@ This repo contains my solutions to the annual programming challenge created by [
 
 Each day lives in its own folder and contains:
 - The solution file(s)
-- The puzzle input
-- Any notes or explanations (optional)
+- The puzzle input (ignored as required.)
 
 ---
 
@@ -69,14 +68,13 @@ dotnet run
 | 11  | ⬜      | ⬜      |
 | 12  | ⬜      | ⬜      |
 
-> I’ll update this table as I complete the challenges!
+I’ll update this table as I complete the challenges!
 
 ---
 
 ## 📝 About Advent of Code
 
-> **Advent of Code** is an annual set of Christmas-themed programming puzzles released daily throughout December.
-> It's a great way to practice logical thinking, algorithms, data structures, and enjoy some holiday fun.
+**Advent of Code** is an annual set of Christmas-themed programming puzzles released daily throughout December.
 
 Learn more or participate yourself at:
 🔗 [https://adventofcode.com](https://adventofcode.com)
@@ -86,5 +84,5 @@ Learn more or participate yourself at:
 ## 🎅 Happy Hacking!
 
 Feel free to ⭐ the repo or follow along as I work through the challenges.
-If you’re also participating, good luck — and may all your inputs be well-formed!
+If you’re also participating, good luck and have fun!
 
