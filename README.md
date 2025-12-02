@@ -13,7 +13,7 @@ This repo contains my solutions to the annual programming challenge created by [
 |------|--------|
 | **C# (.NET)** | Main language / puzzle solutions |
 | **.NET SDK** | Project execution and build |
-| **VSCode** | IDE |
+| **VS 2026** | IDE |
 
 ---
 
@@ -21,13 +21,15 @@ This repo contains my solutions to the annual programming challenge created by [
 
 ```
 
-📂 AdventOfCode2025
-├── 📁 Day01
-│    ├── Day01.cs
-│    ├── input.txt (ignored as required)
-├── 📁 Day02
+📂 AdventOfCode
+├── 📁 Days
+│    ├── Day1.cs
+│    ├── Day2.cs
+├── 📁 Inputs (ignored as required)
+│    ├── Day1.txt (ignored as required)
 │    ├── ...
-└── AdventOfCode2025.sln
+├── Program.cs
+└── AdventOfCode.sln
 
 ````
 
@@ -55,7 +57,7 @@ dotnet run
 
 | Day | Part 1 | Part 2 |
 | --- | ------ | ------ |
-| 1   | ⬜      | ⬜      |
+| 1   | ⭐      | ⬜      |
 | 2   | ⬜      | ⬜      |
 | 3   | ⬜      | ⬜      |
 | 4   | ⬜      | ⬜      |
