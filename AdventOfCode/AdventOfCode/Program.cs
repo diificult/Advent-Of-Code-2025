@@ -1,4 +1,4 @@
 ﻿
 using AdventOfCode.Days;
 
-Day1.Run();
+Day2.Run();
