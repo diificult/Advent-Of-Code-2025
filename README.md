@@ -45,6 +45,8 @@ Make sure you have the **.NET SDK** installed.
 
 To run a particular day:
 
+Place your input file within an Inputs folder.
+
 ```bash
 cd Day01
 dotnet run
@@ -59,7 +61,7 @@ dotnet run
 | --- | ------ | ------ |
 | 1   | ⭐      | ⭐      |
 | 2   | ⭐      | ⭐      |
-| 3   | ⬜      | ⬜      |
+| 3   | ⭐      | ⬜      |
 | 4   | ⬜      | ⬜      |
 | 5   | ⬜      | ⬜      |
 | 6   | ⬜      | ⬜      |
