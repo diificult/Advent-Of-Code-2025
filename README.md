@@ -48,9 +48,11 @@ To run a particular day:
 Place your input file within an Inputs folder.
 
 ```bash
-cd Day01
+cd AdventOfCode
 dotnet run
 ````
+
+Then enter day and part required, using below table to see which ones are avaliable.
 
 
 ---
@@ -59,8 +61,8 @@ dotnet run
 
 | Day | Part 1 | Part 2 |
 | --- | ------ | ------ |
-| 1   | ⭐      | ⭐      |
-| 2   | ⭐      | ⭐      |
+| 1   | ⭐*      | ⭐      |
+| 2   | ⭐*      | ⭐      |
 | 3   | ⭐      | ⬜      |
 | 4   | ⭐      | ⭐      |
 | 5   | ⬜      | ⬜      |
@@ -73,6 +75,8 @@ dotnet run
 | 12  | ⬜      | ⬜      |
 
 I’ll update this table as I complete the challenges!
+
+***not in codebase.**
 
 ---
 

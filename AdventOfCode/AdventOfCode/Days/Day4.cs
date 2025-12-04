@@ -35,7 +35,7 @@ namespace AdventOfCode.Days
             {
                 for (int y = 0; y < input[0].Length; y++)
                 {
-                  //  Console.Write(arr[x][y]);
+               
                     if (arr[x][y] != '@') continue; 
                     
 
@@ -51,7 +51,6 @@ namespace AdventOfCode.Days
                     if (Get(arr, x+1, y+1) == '@') count++;
                     if (count <= 3) ans++;
                 }
-                //Console.WriteLine();
             }
 
             watch.Stop();
@@ -85,7 +84,6 @@ namespace AdventOfCode.Days
             while ((count = RemoveRolls(arr, out newArr)) != 0)
             {
                 ans += count;
-                Console.WriteLine(count);
                 arr = newArr;
             }
 
@@ -112,7 +110,6 @@ namespace AdventOfCode.Days
             {
                 for (int y = 0; y < cols; y++)
                 {
-                    //  Console.Write(arr[x][y]);
                     if (arr[x][y] != '@') continue;
 
 
@@ -134,8 +131,6 @@ namespace AdventOfCode.Days
                     }
                 }
 
-                
-                //Console.WriteLine();
             }
             return result;
 

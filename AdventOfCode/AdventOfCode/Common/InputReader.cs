@@ -5,8 +5,16 @@ namespace AdventOfCode.Common
     {
         public static string[] ReadInputLines(int day)
         {
-            string filePath = $"Inputs/Day{day}.txt";
-            return System.IO.File.ReadAllLines(filePath);
+            try
+            {
+                string filePath = $"Inputs/Day{day}.txt";
+                return System.IO.File.ReadAllLines(filePath);
+            } catch(Exception e)
+            {
+                Console.WriteLine("Error with your input file");
+                return null;
+            }
+
         }
     }
 }
