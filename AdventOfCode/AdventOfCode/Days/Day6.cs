@@ -52,6 +52,49 @@ namespace AdventOfCode.Days
 
         public static void Part2(string[] input)
         {
+
+            var numbers = new List<List<string>>();
+           // var symbols = input[^1].Select(c => c.ToString());
+            var summing = input[^1].Select(c => c.ToString()).Select(c => (c, c == "*" ? 1l : 0l)).ToList();
+            
+
+            foreach (var line in input.SkipLast(1))
+            {
+                var lineSplit = line.Select(z => z.ToString()).ToList();
+                numbers.Add(lineSplit);
+            }
+            
+            while (summing.Count < numbers[0].Count) summing.Add((" ", 0));
+
+
+            for (int i = numbers[0].Count - 1; i >= 0; i--)
+            {
+                var number = "";
+                foreach (var line in numbers)
+                {
+                    number += line[i];
+                }
+
+                int z = 0;
+                while (string.IsNullOrWhiteSpace(summing[i - z].c))
+                {
+                    z++;
+                }
+
+                if (!string.IsNullOrWhiteSpace(number)) {
+                    summing[i - z] = (summing[i - z].c, summing[i - z].c == "+" ? summing[i - z].Item2 + long.Parse(number) : summing[i - z].Item2 * long.Parse(number));
+                    Console.WriteLine($"{number} means {summing[i - z].Item2} is now the value for {i - z} as it is a {summing[i - z].c}");
+                        
+                        };
+            }
+
+            long ans = 0;
+            foreach (var sum in summing)
+            {
+                ans += sum.Item2;
+            }
+            Console.WriteLine("Answer: " + ans);
+
         }
     }
 }
