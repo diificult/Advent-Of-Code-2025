@@ -65,7 +65,7 @@ Then enter day and part required, using below table to see which ones are avalia
 | 2   | ⭐*      | ⭐      |
 | 3   | ⭐      | ⬜      |
 | 4   | ⭐      | ⭐      |
-| 5   | ⬜      | ⬜      |
+| 5   | ⭐      | ⬜      |
 | 6   | ⬜      | ⬜      |
 | 7   | ⬜      | ⬜      |
 | 8   | ⬜      | ⬜      |
