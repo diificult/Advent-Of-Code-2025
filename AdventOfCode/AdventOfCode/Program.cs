@@ -3,7 +3,7 @@ using AdventOfCode.Days;
 using System.Diagnostics;
 
 int dayNo = 5;
-int partNo = 1;
+int partNo = 2;
 
 
 Console.WriteLine("[ENTER A NUMBER] Which day would you like to do? (hit enter for latest)");
