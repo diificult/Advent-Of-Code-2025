@@ -52,9 +52,47 @@ namespace AdventOfCode.Days
 
         }
 
-        public static void Part2(string[] input)
-        {
-        }
+            public static void Part2(string[] input)
+            {
+                char[][] board = new char[input.Length][];
+                for (int i = 0; i < board.Length; i++)
+                {
+                    board[i] = input[i].ToCharArray();
+                }
+
+
+                var origin = (board[0].IndexOf("S"), 0);
+
+                long count = goDown(board, origin.Item1, origin.Item2, new Dictionary<(int x, int y), long>());
+
+                
+
+                Console.WriteLine("Answer: " + count);
+
+            }   
+
+            public static long goDown(char[][] board, int x, int y,  Dictionary<(int x, int y), long> foundCounts)  
+            {
+
+                long count = 0;
+                while (y < board.Length - 1 && (board[y+1][x] == '.'))
+                {
+                    y++;
+                
+                }
+                if (foundCounts.ContainsKey((x, y))) return foundCounts[(x, y)];
+                if (y < board.Length - 1)
+                {
+                    count += goDown(board, x - 1, y + 1, foundCounts);
+                    count += goDown(board, x + 1, y + 1, foundCounts);
+                }
+
+                if (y > board.Length -2) { count = 1; }
+
+                foundCounts[(x, y)] = count;
+                    return count;
+            }
+        
     }
 }
 
