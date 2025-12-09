@@ -69,7 +69,7 @@ Then enter day and part required, using below table to see which ones are avalia
 | 6   | ⭐      | ⭐      |
 | 7   | ⭐      | ⭐      |
 | 8   | ⭐      | ⭐      |
-| 9   | ⬜      | ⬜      |
+| 9   | ⭐      | ⬜      |
 | 10  | ⬜      | ⬜      |
 | 11  | ⬜      | ⬜      |
 | 12  | ⬜      | ⬜      |

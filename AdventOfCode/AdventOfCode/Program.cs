@@ -2,8 +2,8 @@
 using AdventOfCode.Days;
 using System.Diagnostics;
 
-int dayNo = 8;
-int partNo = 2;
+int dayNo = 9;
+int partNo = 1;
 
 
 Console.WriteLine("[ENTER A NUMBER] Which day would you like to do? (hit enter for latest)");
@@ -36,6 +36,7 @@ static void RunDay(int day, int part)
         case 6: Day6.Run(part); break;
         case 7: Day7.Run(part); break;
         case 8: Day8.Run(part); break;
+        case 9: Day9.Run(part); break;
         default:
             Console.WriteLine($"Day {day} is not implemented.");
             break;
