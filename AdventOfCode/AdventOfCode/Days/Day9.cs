@@ -1,5 +1,4 @@
 ﻿using AdventOfCode.Common;
-using System.Numerics;
 
 namespace AdventOfCode.Days
 {
