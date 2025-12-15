@@ -71,7 +71,7 @@ Then enter day and part required, using below table to see which ones are avalia
 | 8   | ⭐      | ⭐      |
 | 9   | ⭐      | ⭐      |
 | 10  | ⭐      | ⬜      |
-| 11  | ⬜      | ⬜      |
+| 11  | ⭐      | ⭐      |
 | 12  | ⬜      | ⬜      |
 
 I’ll update this table as I complete the challenges!
