@@ -3,7 +3,7 @@
 namespace AdventOfCode.Days
 {
 
-    public record Machine(bool[] target, List<List<int>> buttons) { } //ignoring joltages for now
+    public record Machine(bool[] switchTargets, List<List<int>> buttons, int[] joltageTargets) { } //ignoring joltages for now
     public class Day10
     {
 
@@ -35,7 +35,7 @@ namespace AdventOfCode.Days
 
                 var buttons = parts.Skip(1).SkipLast(1).Select(p => p.Trim(new char[] { '(', ')' }).Split(',').Select(b => int.Parse(b)).ToList()).ToList();
 
-                var Machine = new Machine(targets, buttons);
+                var Machine = new Machine(targets, buttons, null);
                 machines.Add(Machine);
             }
             int answer = 0;
@@ -44,13 +44,13 @@ namespace AdventOfCode.Days
             foreach (var machine in machines)
             {
                 List<bool[]> states = new List<bool[]>();
-                states.Add(new bool[machine.target.Length]);
+                states.Add(new bool[machine.switchTargets.Length]);
 
                 var newStates = new List<bool[]>();
 
                 int switchesDone = 0;
 
-                while (!states.Any(s => s.SequenceEqual(machine.target)))
+                while (!states.Any(s => s.SequenceEqual(machine.switchTargets)))
                 {
                     foreach (var buttons in machine.buttons)
                     {
@@ -84,6 +84,66 @@ namespace AdventOfCode.Days
 
         public static void Part2(string[] input)
         {
+
+            var machines = new List<Machine>();
+
+            foreach (string line in input)
+            {
+                var parts = line.Split(" ").ToList();
+                int[] targets = parts[^1].Trim(new char[] { '{', '}' }).Split(',').Select(s => int.Parse(s)).ToArray();
+
+                var buttons = parts.Skip(1).SkipLast(1).Select(p => p.Trim(new char[] { '(', ')' }).Split(',').Select(b => int.Parse(b)).ToList()).ToList();
+
+                var Machine = new Machine(null, buttons, targets);
+                machines.Add(Machine);
+            }
+            int answer = 0;
+
+
+            foreach (var machine in machines)
+            {
+                List<int[]> states = new List<int[]>();
+                states.Add(new int[machine.joltageTargets.Length]);
+
+
+                int switchesDone = 0;
+
+                while (!states.Any(s => s.SequenceEqual(machine.joltageTargets)))
+                {
+
+                    var newStates = new List<int[]>();
+                    states = states .Where(s => s.Zip(machine.joltageTargets, (x, t) => x <= t).All(z => z)).ToList();
+                    foreach (var buttons in machine.buttons)
+                    {
+                        foreach (var state in states)
+                        {
+
+                            var updatedState = state.Select(s => s).ToArray();
+                            var changeJoltage = updateJoltage(updatedState, buttons);
+                            newStates.Add(changeJoltage);
+
+                        }
+
+                    }
+                    states = newStates.DistinctBy(arr => string.Join(",", arr)).ToList();
+                    switchesDone++;
+                }
+                answer += switchesDone;
+            }
+            Console.WriteLine("Answer: " + answer);
+
+        }
+
+        public static int[] updateJoltage(int[] input, List<int> buttons)
+        {
+
+            foreach (var button in buttons)
+            {
+                input[button] ++;
+            }
+
+            return input;
+
         }
     }
 }

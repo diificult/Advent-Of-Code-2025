@@ -2,7 +2,7 @@
 using AdventOfCode.Days;
 using System.Diagnostics;
 
-int dayNo = 10;
+int dayNo = 11;
 int partNo = 1;
 
 
@@ -38,6 +38,7 @@ static void RunDay(int day, int part)
         case 8: Day8.Run(part); break;
         case 9: Day9.Run(part); break;
         case 10: Day10.Run(part); break;
+        case 11: Day11.Run(part); break;
         default:
             Console.WriteLine($"Day {day} is not implemented.");
             break;
